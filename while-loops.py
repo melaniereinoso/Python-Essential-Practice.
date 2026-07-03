@@ -159,3 +159,20 @@ print("Odd numbers ", oddNumbers)
 print("Juego finalizado")
 
 
+# Collatz Conjecture - Python Essentials Practice
+# This program reads a positive integer, applies the Collatz algorithm,
+# displays each intermediate value, and counts the total number of steps
+# required to reach 1.
+
+c0= int(input("type a number"))
+steps= 0
+
+while c0 != 1:
+    steps +=1
+    if c0 %2 == 0:
+        c0 =  c0//2
+        print(c0)
+    else:
+        c0 = 3 * c0 +1
+        print(c0)
+print("The numbers of steps where: ",steps)   
