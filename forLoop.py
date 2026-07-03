@@ -69,3 +69,15 @@ while ladrillo >= needed:
     needed += 1 #incrementing the steps that we need to go on the next layer. 
 
 print("the steps needed were: ", steps)
+
+
+
+
+    
+
+email = "john.smith@pythoninstitute.org"
+
+for letter in email:
+    if letter == "@":
+        break
+    print(letter, end=" ")
