@@ -260,3 +260,30 @@ for i, number in enumerate(numbers):
 
 # Print the new list
 print(even_numbers)
+
+# listas dentro de listas
+
+board = []
+
+for i in range(2):
+    row = []
+
+    # Completa aquí el for que crea una fila de 4 ceros
+    for j in range(4):
+    # Agrega la fila al tablero
+        row.append(0)
+
+print(board)
+
+
+classroom = []
+for i in range(3):
+    row = []
+# Escribe tu código aquí
+    for j in range(2):
+    # Agrega la fila al tablero
+        row.append("0")
+
+print(classroom)
+
+
