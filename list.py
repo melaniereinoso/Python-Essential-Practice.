@@ -285,5 +285,3 @@ for i in range(3):
         row.append("0")
 
 print(classroom)
-
-

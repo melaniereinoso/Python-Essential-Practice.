@@ -1,0 +1,150 @@
+def greet():
+    print("Hello")
+
+greet() # invocation
+
+#return
+
+def add():
+    return 5
+
+print(add())
+##########################################
+def calculate_discount(price, discount):
+    discount = (discount / 100) * price
+    final_price= price - discount
+    return final_price
+
+
+result = calculate_discount(100, 20)
+print(result)
+ ######################################################
+
+def is_adult(age):
+    if age >= 18:
+        return True
+    else:
+        return False
+
+print(is_adult(25))
+
+#####################################################
+
+def bigger_number(a, b):
+    if a > b:
+        return a
+    else:
+        return b
+
+print(bigger_number(10, 5))
+print(bigger_number(3, 8))
+
+
+##################################
+
+def get_grade(score):
+    if score >= 90 :
+        return "A"
+    elif score >= 80 and score <= 89:
+        return "B"
+    elif score >= 70 and score <= 79:
+        return "C"
+    elif score >= 60 and score <= 69:
+        return "D"
+    else:
+        return "F"
+
+print(get_grade(95))
+print(get_grade(82))
+print(get_grade(55))
+
+####################3
+
+def average(numbers):
+    total= 0
+    for i in numbers:
+        total += i
+    average = total / len(numbers)
+
+    return average
+
+#############################
+
+
+    #
+# Function that checks if a year is a leap year
+def is_year_leap(year):
+
+    # If the year is divisible by 400, it is a leap year
+    if year % 400 == 0:
+        return True
+
+    # If the year is divisible by 100 (but not by 400), it is not a leap year
+    elif year % 100 == 0:
+        return False
+
+    # If the year is divisible by 4, it is a leap year
+    elif year % 4 == 0:
+        return True
+
+    # Otherwise, it is not a leap year
+    else:
+        return False
+
+
+# List containing the number of days in each month
+days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+
+# Function that returns the number of days in a given month and year
+def days_in_month(year, month):
+
+    # Check if the year or month is invalid
+    if year < 1 or month < 1 or month > 12:
+        return None
+
+    # Handle February separately because it depends on leap years
+    elif month == 2:
+
+        # Return 29 days if it is a leap year
+        if is_year_leap(year):
+            return 29
+
+        # Otherwise, return 28 days
+        else:
+            return 28
+
+    # Return the number of days for all other months
+    else:
+        return days[month - 1]
+    
+
+
+    #
+
+def day_of_year(year, month, day):
+    if year < 1 or month < 1 or month > 12:
+        return None
+    elif day < 1:
+        return None
+    
+    max_days = days_in_month(year, month)
+
+    if day < 1 or day > max_days:
+        return None
+    
+    
+    total = 0
+
+    for i in range(month-1):
+        total += days_in_month(year, i + 1)
+
+    total += day
+
+    return total
+
+
+
+
+
+
